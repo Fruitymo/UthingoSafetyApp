@@ -8,7 +8,8 @@ Uthingo is a Zulu word and means "Rainbow", a rainbow that came after a hard tim
 The initial version of the app is developed using MAUI composed of ```dotNet``` ```C#``` ```XAML```
 - First install visual studio 2022 and ensure you select .NET Multi-platform App UI development and .NET desktop development as part of the dev tools
 
-![image](https://user-images.githubusercontent.com/6312647/191294394-983fd991-d33a-4ea0-82bf-d0a77adc7719.png)
+![12](https://user-images.githubusercontent.com/97768133/191299736-f1d4fa26-7100-4f88-b492-b0fd36a37045.png)
+
 
 - Install Blend for visual studio 2022
 - fork this repo, accept the contribution code of conduct
