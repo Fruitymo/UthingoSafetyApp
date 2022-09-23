@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UthingoMauiApp.LoginPage"
+             Shell.NavBarIsVisible="False"
+             Title="LoginPage">
+    <Grid RowDefinitions="1*,8*,1*">
+        <Frame BackgroundColor="#cfd0d8" Grid.Row="0" 
+               HorizontalOptions="EndAndExpand" 
+               Padding="0" 
+               Margin="0,-80,-80,0"
+               HeightRequest="250" 
+               WidthRequest="250" 
+               CornerRadius="125">
+
+        </Frame>
+        <Frame BackgroundColor="{x:StaticResource Primary}" Grid.Row="0" 
+               HorizontalOptions="EndAndExpand" 
+               Padding="0" 
+               Margin="0,-120,-120,0"
+               HeightRequest="250" 
+               WidthRequest="250" 
+               CornerRadius="125">
+
+        </Frame>
+
+
+        <Frame BackgroundColor="#cfd0d8" Grid.Row="2" 
+               VerticalOptions="EndAndExpand"
+               HorizontalOptions="StartAndExpand" 
+               
+               Padding="0" 
+               Margin="0,0,0,-180"
+               HeightRequest="250" 
+               WidthRequest="250" 
+               CornerRadius="125">
+
+        </Frame>
+
+        <Frame BackgroundColor="{x:StaticResource DashboardBackground}"
+               Grid.Row="1"
+               VerticalOptions="CenterAndExpand"
+               Margin="40,40,40,40">
+            <VerticalStackLayout Spacing="25">
+                <Label Text="LOGIN" FontSize="28" FontAttributes="Bold"/>
+
+
+                <Frame Padding="10" BackgroundColor="Transparent" CornerRadius="0">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image Source="email.png" VerticalOptions="Center" HeightRequest="25" WidthRequest="25"></Image>
+                        <Entry Placeholder="Email" VerticalOptions="Center" Grid.Column="1"></Entry>
+                    </Grid>
+                </Frame>
+
+                <Frame Padding="10" BackgroundColor="Transparent" CornerRadius="0">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image Source="password.png" VerticalOptions="Center" HeightRequest="25" WidthRequest="25"></Image>
+                        <Entry Placeholder="Password" VerticalOptions="Center" IsPassword="True" Grid.Column="1"></Entry>
+
+                    </Grid>
+
+                </Frame>
+                <Button Text="LOGIN" FontAttributes="Bold" FontSize="20" CornerRadius="10" HeightRequest="60"></Button>
+                <Label Text="Forgot Password?" TextColor="Gray" FontAttributes="Bold" HorizontalTextAlignment="Center"></Label>
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                    <Label FontAttributes="Bold" TextColor="Gray" Text="Don't have an account?" VerticalTextAlignment="Center"></Label>
+                    <Label Text="Register Here" FontSize="18" FontAttributes="Bold" TextColor="{x:StaticResource Primary}"></Label>
+                    <HorizontalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_For_Register"></TapGestureRecognizer>
+                    </HorizontalStackLayout.GestureRecognizers>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="{x:StaticResource Primary}" Grid.Row="2" 
+               VerticalOptions="EndAndExpand"
+               HorizontalOptions="StartAndExpand" 
+               Padding="0" 
+               Margin="0,0,0,-200"
+               HeightRequest="250" 
+               WidthRequest="250" 
+               CornerRadius="125">
+
+        </Frame>
+    </Grid>
+</ContentPage>

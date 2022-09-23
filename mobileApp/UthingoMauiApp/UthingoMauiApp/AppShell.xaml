@@ -6,9 +6,15 @@
     xmlns:local="clr-namespace:UthingoMauiApp"
     Shell.FlyoutBehavior="Disabled">
 
+    
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        ContentTemplate="{DataTemplate local:LoginPage}"
+        Route="Login" />
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:RegistrationPage}"
+        Route="Register" />
 
 </Shell>
