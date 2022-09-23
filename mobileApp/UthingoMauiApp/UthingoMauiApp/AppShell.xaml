@@ -3,18 +3,18 @@
     x:Class="UthingoMauiApp.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:UthingoMauiApp"
+    xmlns:views="clr-namespace:UthingoMauiApp.Views"
     Shell.FlyoutBehavior="Disabled">
 
     
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:LoginPage}"
+        ContentTemplate="{DataTemplate views:LoginPage}"
         Route="Login" />
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:RegistrationPage}"
+        ContentTemplate="{DataTemplate views:RegistrationPage}"
         Route="Register" />
 
 </Shell>

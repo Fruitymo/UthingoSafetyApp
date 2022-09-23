@@ -1,4 +1,4 @@
-namespace UthingoMauiApp;
+namespace UthingoMauiApp.Views;
 
 public partial class LoginPage : ContentPage
 {
