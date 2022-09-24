@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UthingoMauiApp.ViewModels
 {
-    public partial class LoginPageViewModel : 
+    internal class BaseViewModel
     {
     }
 }
