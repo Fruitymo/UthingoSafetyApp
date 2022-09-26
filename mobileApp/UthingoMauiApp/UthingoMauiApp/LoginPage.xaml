@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UthingoMauiApp.LoginPage"
-             Title="LoginPage">
+             Title="Login Page">
 
     <Grid BackgroundColor="White">
         <Grid.RowDefinitions>
@@ -11,7 +11,7 @@
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
 
-        <Path Data="m87.50003,51.74167l624.99997,0l0,293.23947c-288.49998,146 -356.49998,148.72962 -625.99997,22.24689l1,-315.48636z" Stroke="#000" Fill="#ffffff"/>
+        <Path Data="m0.30001,0l449,0l0,128.48327c-122.5,64.30167 -332.5,65.89076 -449,7.2429c0,-45.25313 0,-90.47304 0,-135.72617z" Stroke="#ffffff" Fill="#2ECC71"/>
 
         <StackLayout>
             <Frame BackgroundColor="SkyBlue" HeightRequest="60" WidthRequest="60" CornerRadius="30" Padding="0" Margin="0,100,0,0" HorizontalOptions="Center">
