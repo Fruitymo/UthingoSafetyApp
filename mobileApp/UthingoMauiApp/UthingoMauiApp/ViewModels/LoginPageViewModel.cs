@@ -13,5 +13,10 @@ namespace UthingoMauiApp.ViewModels
         private string _userName;
         [ObservableProperty]
         private string _password;
+
+       /* public void Login()
+        {
+
+        }*/
     }
 }
