@@ -5,3 +5,6 @@ RapooBonolo
 thandoq
 CodeCracker_Gleam
 alchemistHustle
+amajola
+ntokozo98
+RLesego
