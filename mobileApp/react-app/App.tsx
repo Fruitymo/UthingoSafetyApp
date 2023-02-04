@@ -41,8 +41,16 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={MyTabs} />
-        <Stack.Screen name="SignUp" component={LandingPage} />
+        <Stack.Screen
+          name="MainNav"
+          component={MyTabs}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="SignUp"
+          component={LandingPage}
+          options={{ headerShown: false }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
