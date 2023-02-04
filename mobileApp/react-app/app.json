@@ -1,0 +1,8 @@
+{
+  "expo": {
+    "jsEngine": "hermes",
+    "ios": {
+      "jsEngine": "jsc"
+    }
+  }
+}

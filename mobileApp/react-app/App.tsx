@@ -1,11 +1,18 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import LandingPage from "./src/landing-page";
+import { useNavigation } from "@react-navigation/native";
+
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
 const Home = () => {
+  const { navigate, getId } = useNavigation();
+
   return (
     <View>
       <Text>Asimthadne Majola</Text>
@@ -33,7 +40,10 @@ function MyTabs() {
 export default function App() {
   return (
     <NavigationContainer>
-      <MyTabs />
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={MyTabs} />
+        <Stack.Screen name="SignUp" component={LandingPage} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
