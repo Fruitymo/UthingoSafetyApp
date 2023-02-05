@@ -1,36 +1,19 @@
 ﻿namespace Uthingo.ViewModels;
 
-public class MainPageViewModel : BindableBase
+public class MainPageViewModel : ViewModelBase
 {
-    private ISemanticScreenReader _screenReader { get; }
-    private int _count;
+    private INavigationService _navigationService { get; }
+    public DelegateCommand<string> NavigateCommand { get; }
 
-    public MainPageViewModel(ISemanticScreenReader screenReader)
+    private void OnNavigateCommandExecuted(string uri)
     {
-        _screenReader = screenReader;
-        CountCommand = new DelegateCommand(OnCountCommandExecuted);
+        _navigationService.NavigateAsync(uri)
+            .OnNavigationError(ex => Console.WriteLine(ex));
     }
 
-    public string Title => "Main Page";
-
-    private string _text = "Click me";
-
-    public string Text
+    public MainPageViewModel(INavigationService navigationService, IPageDialogService pageDialogService) : base(navigationService, pageDialogService)
     {
-        get => _text;
-        set => SetProperty(ref _text, value);
-    }
-
-    public DelegateCommand CountCommand { get; }
-
-    private void OnCountCommandExecuted()
-    {
-        _count++;
-        if (_count == 1)
-            Text = "Clicked 1 time";
-        else if (_count > 1)
-            Text = $"Clicked {_count} times";
-
-        _screenReader.Announce(Text);
+        _navigationService = navigationService;
+        NavigateCommand = new DelegateCommand<string>(OnNavigateCommandExecuted);
     }
 }

@@ -1,37 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             Title="{Binding Title}"
-             x:Class="Uthingo.Views.MainPage">
-
-  <ScrollView>
-    <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
-
-      <Image Source="prism.png"
-             SemanticProperties.Description="Cute dot net bot waving hi to you!"
-             HeightRequest="150"
-             HorizontalOptions="Center" />
-
-      <Label Text="Hello, World!"
-             SemanticProperties.HeadingLevel="Level1"
-             FontSize="32"
-             HorizontalOptions="Center" />
-
-      <Label Text="Welcome to Prism for .NET MAUI"
-             SemanticProperties.HeadingLevel="Level2"
-             SemanticProperties.Description="Welcome to Prism for dot net Multi platform App U I"
-             FontSize="18"
-             HorizontalOptions="Center" />
-
-      <Button Text="{Binding Text}"
-              SemanticProperties.Hint="Counts the number of times you click"
-              Command="{Binding CountCommand}"
-              HorizontalOptions="Center" />
-
-    </VerticalStackLayout>
-  </ScrollView>
-
-</ContentPage>
+<FlyoutPage
+    x:Class="Uthingo.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="{Binding Title}"
+    BackgroundColor="White">
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Menu">
+            <StackLayout
+                Margin="20"
+                Spacing="15">
+                <Button
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="NavigationPage/ViewA"
+                    Text="ViewA" />
+                <Button
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="NavigationPage/ViewB"
+                    Text="ViewB" />
+                <Button
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="NavigationPage/ViewC"
+                    Text="ViewC" />
+                <Button
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="NavigationPage/ViewD"
+                    Text="ViewD" />
+                <Button
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="NavigationPage/SamplePage"
+                    Text="SamplePage" />
+                <Button
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="/RootPage"
+                    Text="Root Page" />
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+</FlyoutPage>
