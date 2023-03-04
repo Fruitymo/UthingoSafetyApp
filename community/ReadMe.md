@@ -1,0 +1,1 @@
+Please join the discord channel https://discord.gg/Tw25ZmyF 
