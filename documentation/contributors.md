@@ -1,8 +1,14 @@
 Thank you for volunteering to be a contributor.
 
 Please add your github username below to be added to the GitHub project associated with this repo.
-RapooBonolo
+
 thandoq
+RapooBonolo
 CodeCracker_Gleam
-ntokozo98
+ntokozom98
+lulla01
+leroygumede
+alchemistHustle
+amajola
+alchemistHustle
 RLesego
